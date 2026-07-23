@@ -1234,3 +1234,87 @@ h3,
 .site-footer {
   border-top: 1px solid rgba(196, 147, 82, 0.42);
 }
+
+/* AJUSTES DE ACESSIBILIDADE — CONTRASTE E FOCO
+   Cole este bloco no FINAL do css/style.css.
+*/
+
+/* Texto dourado sobre fundos claros */
+.kicker,
+.service-number,
+.problem-list span,
+.faq-list summary::after {
+  color: var(--gold-dark);
+}
+
+/* Texto dourado sobre fundos escuros */
+.hero .eyebrow,
+.dark-section .kicker,
+.dark-section .text-cta,
+.dark-section .difference-grid span,
+.final-cta .kicker {
+  color: #d6a96d;
+}
+
+/* Botões dourados: texto escuro para contraste suficiente */
+.btn-primary {
+  color: #111315;
+}
+
+.btn-primary:hover {
+  color: #111315;
+}
+
+/* Barra de ação mobile */
+.mobile-action-bar a:last-child {
+  background: var(--gold);
+  color: #111315;
+}
+
+/* Melhora a leitura dos textos claros em áreas escuras */
+.hero-copy {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.light-heading > p:last-child,
+.final-cta p:last-child {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.difference-grid p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.footer-grid p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-grid a {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-bottom {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* Foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #d6a96d;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* O botão do WhatsApp mantém o padrão visual,
+   mas recebe foco visível para teclado */
+.floating-whatsapp:focus-visible {
+  outline: 3px solid #111315;
+  outline-offset: 4px;
+}
+
+/* Evita perda de contraste no hover */
+.desktop-nav a:hover,
+.footer-grid a:hover {
+  color: #ffffff;
+}
